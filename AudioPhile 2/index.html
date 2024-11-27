@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AudioPhile</title>
+    <link rel="stylesheet" href="index.css" />
+
+    <!-- npx tailwindcss -i ./src/style.css -o ./main/index.css --watch  -->
+    <style>
+      .harmburger {
+        display: none;
+      }
+
+      .harmburger2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 20px;
+        width: 30px;
+        cursor: pointer;
+      }
+
+      .harmburger2 .bar {
+        height: 3px;
+        width: 100%;
+        background-color: white;
+      }
+
+      .harmburger:checked + .harmburger2 + .nav-menu {
+        display: flex;
+      }
+
+      .nav-menu {
+        display: none;
+        background-color: black;
+        height: 400px;
+        width: 150px;
+        text-align: center;
+      }
+
+      .nav-menu ul li {
+        list-style: none;
+      }
+
+      .nav-menu ul li a {
+        text-decoration: none;
+        color: white;
+      }
+
+      #mk2 {
+        background-image: none;
+      }
+
+      #zx7 {
+        background-image: url('/big-black-speaker.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      @media screen and (max-width: 639px) {
+        #mk2 {
+          background-image: url(/black\ headphones-bg.png);
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="w-full bg-[#131313] z-10">
+        <div
+          class="flex justify-between w-[85%] pt-5 items-center border-blue-50 m-auto relative"
+        >
+          <div class="text-teal-50 sm:hidden">
+            <input type="checkbox" id="menu-icon" class="harmburger" />
+            <label for="menu-icon" class="harmburger2">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </label>
+
+            <div class="nav-menu absolute top-16 z-20">
+              <ul class="grid grid-cols-1 m-auto gap-y-16 justify-items-center">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="headphones.html">Headphones</a></li>
+                <li><a href="speakers.html">Speaker</a></li>
+                <li><a href="earphones.html">Earphones</a></li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <p class="text-white text-3xl font-bold">audiophile</p>
+          </div>
+
+          <div
+            class="text-white hidden sm:grid grid-cols-4 grid-rows-1 gap-x-8 justify-items-center text-xs z-10"
+          >
+            <a class="hover:text-[#D87D4A]" href="index.html">HOME</a>
+            <a class="hover:text-[#D87D4A]" href="headphones.html"
+              >HEADPHONES</a
+            >
+            <a class="hover:text-[#D87D4A]" href="speakers.html">SPEAKERS</a>
+            <a class="hover:text-[#D87D4A]" href="earphones.html">EARPHONES</a>
+          </div>
+
+          <div>
+            <div class="z-10">
+              <svg
+                width="25px"
+                height="25px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                stroke="#ffffff"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M21 5L19 12H7.37671M20 16H8L6 3H3M11.5 7L13.5 9M13.5 9L15.5 7M13.5 9V3M9 20C9 20.5523 8.55228 21 8 21C7.44772 21 7 20.5523 7 20C7 19.4477 7.44772 19 8 19C8.55228 19 9 19.4477 9 20ZM20 20C20 20.5523 19.5523 21 19 21C18.4477 21 18 20.5523 18 20C18 19.4477 18.4477 19 19 19C19.5523 19 20 19.4477 20 20Z"
+                    stroke="#ffffff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="w-full bg-[#131313]">
+      <div
+        class="grid grid-cols-1 w-full justify-items-center sm:flex sm:w-[85%] justify-between items-center m-auto"
+      >
+        <div
+          class="pt-12 w-[100%] flex flex-col text-center sm:w-[45%] sm:text-left text-white z-10"
+          id="mk2"
+        >
+          <h2 class="font-mono tracking-widest mb-7">NEW PRODUCT</h2>
+          <h1 class="text-3xl sm:text-5xl">
+            XX99 MK II
+            <p>HEADPHONES</p>
+          </h1>
+          <p
+            class="w-[65%] m-auto sm:text-sm sm:w-full mt-5 mb-10 text-gray-300"
+          >
+            Experience natural, lifelike audio and exceptional build quality
+            made for the passionate music enthusiast.
+          </p>
+
+          <div class="pb-20">
+            <a
+              href="xx99mk2.html"
+              class="bg-[#D87D4A] pt-3 pb-3 pl-5 pr-5 rounded-sm hover:bg-[#fbaf85]"
+            >
+              See Product
+            </a>
+          </div>
+        </div>
+
+        <div class="hidden sm: w-[50%] sm:flex z-0">
+          <img class="w-full h-full" src="home-headphones.png" alt="hi" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Speaker , headphones and earphones section -->
+
+    <div class="w-full mt-44">
+      <div
+        class="grid w-[75%] grid-cols-1 gap-32 sm:grid sm:w-[90%] sm:grid-cols-3 sm:gap-5 m-auto"
+      >
+        <div class="bg-[#F1F1F1] grid justify-items-center pb-5 rounded-md">
+          <div class="-mt-20 flex justify-center">
+            <img src="headphones.png" alt="" />
+          </div>
+          <div class="grid mt-10">
+            <h2 class="font-bold font-mono text-lg tracking-widest">
+              HEADPHONES
+            </h2>
+            <div class="flex justify-evenly items-center">
+              <a href="headphones.html" class="hover:text-[#D87D4A]">Shop</a>
+              <svg
+                fill="#D87D4A"
+                width="20px"
+                height="20px"
+                viewBox="-64 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M365.52 209.85L59.22 67.01c-16.06-7.49-35.15-.54-42.64 15.52L3.01 111.61c-7.49 16.06-.54 35.15 15.52 42.64L236.96 256.1 18.49 357.99C2.47 365.46-4.46 384.5 3.01 400.52l13.52 29C24 445.54 43.04 452.47 59.06 445l306.47-142.91a32.003 32.003 0 0 0 18.48-29v-34.23c-.01-12.45-7.21-23.76-18.49-29.01z"
+                  />
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="bg-[#F1F1F1] grid justify-items-center pb-5 rounded-md">
+          <div class="-mt-20 flex justify-center">
+            <img src="speaker.png" alt="" />
+          </div>
+          <div class="grid mt-10">
+            <h2 class="font-bold font-mono text-lg tracking-widest">
+              SPEAKERS
+            </h2>
+            <div class="flex justify-evenly items-center">
+              <a href="speakers.html" class="hover:text-[#D87D4A]">Shop</a>
+              <svg
+                fill="#D87D4A"
+                width="20px"
+                height="20px"
+                viewBox="-64 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M365.52 209.85L59.22 67.01c-16.06-7.49-35.15-.54-42.64 15.52L3.01 111.61c-7.49 16.06-.54 35.15 15.52 42.64L236.96 256.1 18.49 357.99C2.47 365.46-4.46 384.5 3.01 400.52l13.52 29C24 445.54 43.04 452.47 59.06 445l306.47-142.91a32.003 32.003 0 0 0 18.48-29v-34.23c-.01-12.45-7.21-23.76-18.49-29.01z"
+                  />
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-[#F1F1F1] grid justify-items-center pb-5 rounded-md">
+          <div class="-mt-20 flex justify-center">
+            <img class="w-36" src="earphones.png" alt="" />
+          </div>
+          <div class="grid mt-10">
+            <h2 class="font-bold font-mono text-lg tracking-widest">
+              EARPHONES
+            </h2>
+            <div class="flex justify-evenly items-center">
+              <a href="earphones.html" class="hover:text-[#D87D4A]">Shop</a>
+              <svg
+                fill="#D87D4A"
+                width="20px"
+                height="20px"
+                viewBox="-64 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M365.52 209.85L59.22 67.01c-16.06-7.49-35.15-.54-42.64 15.52L3.01 111.61c-7.49 16.06-.54 35.15 15.52 42.64L236.96 256.1 18.49 357.99C2.47 365.46-4.46 384.5 3.01 400.52l13.52 29C24 445.54 43.04 452.47 59.06 445l306.47-142.91a32.003 32.003 0 0 0 18.48-29v-34.23c-.01-12.45-7.21-23.76-18.49-29.01z"
+                  />
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ZX-9  Speaker section-->
+
+    <div class="w-full mt-20">
+      <div class="w-[90%] m-auto">
+        <div
+          class="rounded-md w-full m-auto grid grid-cols-1 md:grid-cols-2 justify-items-center items-center pt-20 bg-[#D87D4A]"
+        >
+          <div id="zx9">
+            <img src="speaker-big.png" alt="" />
+          </div>
+          <div class="text-white text-center mt-10 md:text-left">
+            <div class="text-6xl tracking-widest">
+              <h1>ZX9</h1>
+              <h1>Speaker</h1>
+            </div>
+            <div class="mt-10">
+              <p>
+                Upgrade to premium speakers that are <br />
+                phenomenally built to deliver truly remarkable
+                <br />sound.
+              </p>
+            </div>
+            <div class="mt-5 pb-10">
+              <a
+                href="zx9.html"
+                class="pb-3 pt-3 bg-black text-white pl-5 pr-5 rounded-sm hover:bg-[#2a2a2a]"
+              >
+                See Product
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ZX 7 Speaker section  -->
+
+    <div class="mt-10">
+      <div class="w-full h-full">
+        <div class="w-[90%] m-auto">
+          <div id="zx7" class="w-full m-auto h-[350px] rounded-md">
+            <div class="grid gap-y-10 h-full pl-20 pt-14 pb-14">
+              <h1 class="text-3xl sm:text-5xl mt-10 tracking-widest">
+                ZX7 SPEAKER
+              </h1>
+              <div>
+                <a
+                  class="pt-3 pb-3 border text-black border-black pl-5 pr-5 rounded-sm hover:bg-[#101010] hover:text-white"
+                  href="zx7.html"
+                  >SEE PRODUCT</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- YX1 earphones -->
+    <div class="mt-10">
+      <div class="w-full">
+        <div
+          class="w-[90%] grid m-auto grid-cols-1 gap-y-10 justify-items-center md:m-auto justify-between md:flex items-center"
+        >
+          <div class="w-[90%] md:w-[48%] h-[300px]">
+            <img class="h-full w-full" src="yx-1charging.png" alt="" />
+          </div>
+
+          <div
+            class="bg-[#F1F1F1] w-[90%] pb-10 md:h-[300px] rounded-md md:w-[48%]"
+          >
+            <div class="grid gap-y-5 mt-16 justify-items-center">
+              <h1 class="text-2xl sm:text-3xl tracking-widest">
+                YX1 EARPHONES
+              </h1>
+
+              <a
+                class="pt-3 pb-3 border text-black border-black pl-5 pr-5 rounded-sm hover:bg-[#101010] hover:text-white"
+                href="yx1.html"
+                >SEE PRODUCT</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAN WITH HEADPHONES -->
+    <div class="mt-20">
+      <div class="w-full">
+        <div
+          class="w-[90%] grid grid-cols-1 justify-items-center md:flex justify-between items-center m-auto"
+        >
+          <div class="grid w-full m-auto justify-items-center md:hidden">
+            <img src="man-headphones.png" alt="" />
+          </div>
+
+          <div
+            class="mt-16 w-full grid text-3xl md:w-[45%] md:text-left md:mt-0 lg:text-4xl"
+          >
+            <div class="text-left">
+              <h1 class="text-center md:text-left">BRINGING YOU THE</h1>
+              <div class="text-center md:text-left gap-x-1">
+                <h1><span class="text-[#D87D4A]">BEST</span> AUDIO GEAR</h1>
+              </div>
+            </div>
+            <div class="text-base text-center md:text-left mt-10">
+              <p>
+                Located at the heart of New York City, Audiophile is the premier
+                store for high end headphones, earphones, speakers, and audio
+                accessories. We have a large showroom and luxury demonstration
+                rooms available for you to browse and experience a wide range of
+                our products. Stop by our store to meet some of the fantastic
+                people who make Audiophile the best place to buy your portable
+                audio equipment.
+              </p>
+            </div>
+          </div>
+          <div class="hidden md:w-[45%] md:block">
+            <img src="man-headphones.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="mt-52">
+        <div class="w-full bg-[#131313]">
+          <div
+            class="grid gap-y-5 m-auto sm:grid grid-cols-1 justify-items-center md:m-auto w-[90%] justify-between pt-10 md:flex items-center"
+          >
+            <div class="sm:pl-0">
+              <p class="text-white text-3xl font-bold">audiophile</p>
+            </div>
+
+            <div
+              class="text-white grid grid-cols-1 justify-items-center gap-y-5 sm:grid-cols-4 sm:justify-items-start md:justify-items-center tracking-widest gap-x-4 text-xs"
+            >
+              <a class="hover:text-[#D87D4A]" href="index.html">HOME</a>
+              <a class="hover:text-[#D87D4A]" href="headphones.html"
+                >HEADPHONES</a
+              >
+              <a class="hover:text-[#D87D4A]" href="speakers.html">SPEAKERS</a>
+              <a class="hover:text-[#D87D4A]" href="earphones.html"
+                >EARPHONES</a
+              >
+            </div>
+          </div>
+
+          <div class="w-full mt-10 text-gray-300">
+            <div class="w-[90%] m-auto">
+              <p class="w-full text-center md:w-[50%] md:text-left">
+                Audiophile is an all in one stop to fulfill your audio needs.
+                We're a small team of music lovers and sound specialists who are
+                devoted to helping you get the most out of personal audio. Come
+                and visit our demo facility - we’re open 7 days a week.
+              </p>
+            </div>
+          </div>
+
+          <div class="w-full mt-10">
+            <div
+              class="w-[90%] m-auto grid grid-cols-1 gap-y-10 pb-10 justify-items-center sm:flex justify-between items-center"
+            >
+              <div class="text-gray-300">
+                <p>Copyright 2021. All Rights Reserved</p>
+              </div>
+              <div class="flex gap-x-5">
+                <div class="hover:bg-[#D87D4A] hover:rounded-lg">
+                  <img src="facebook.png" alt="" />
+                </div>
+                <div class="hover:bg-[#D87D4A] hover:rounded-lg">
+                  <img src="twitter.png" alt="" />
+                </div>
+                <div class="hover:bg-[#D87D4A] hover:rounded-lg">
+                  <img src="insta.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
